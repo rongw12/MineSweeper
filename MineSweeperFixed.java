@@ -1,8 +1,8 @@
 
 /**
    MineSweeperFixed -- main class for a GUI minesweeper game.
-   Uses a hard-coded mine field for testing purposes.  For more details about this
-   game and how to play it, see the assignment description.
+   Uses a hard-coded mine field for testing purposes.
+   It could display the board and play the game with fixed and known mines locations.
    
    To run it from the command line: 
       java MineSweeperFixed

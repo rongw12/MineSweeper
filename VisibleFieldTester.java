@@ -1,8 +1,3 @@
-// Name: Rong Wang
-// USC NetID: rwang424
-// CSCI455 PA2
-// Fall 2020
-
 import java.util.Arrays;
 
 public class VisibleFieldTester{

@@ -1,8 +1,3 @@
-// Name: Rong Wang
-// USC NetID: rwang424
-// CS 455 PA3
-// Fall 2020
-
 import java.util.Random;
 import java.util.Arrays;
 
@@ -14,8 +9,6 @@ import java.util.Arrays;
       includes convenience method to tell the number of mines adjacent to a location.
  */
 public class MineField {
-   
-   // <put instance variables here>
    /**
     * @param mineData: the data for the mines; must have at least one row and one col, and must be rectangular.
     * @param numRows: number of rows this minefield will have, must be positive.
@@ -193,10 +186,6 @@ public class MineField {
    public int numMines() {
       return this.numMines;     
    }
-
-   
-   // <put private methods here>
-   
-         
+ 
 }
 

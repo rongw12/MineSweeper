@@ -1,8 +1,3 @@
-// Name: Rong Wang
-// USC NetID: rwang424
-// CSCI455 PA2
-// Fall 2020
-
 import java.util.Arrays;
 
 public class MineFieldTester{
@@ -65,9 +60,6 @@ public class MineFieldTester{
       System.out.println("[2, 0] has mine [exp:false]: " + test1.hasMine(2, 0));
       System.out.println("[1, 1] has mine [exp:false]: " + test1.hasMine(1, 1));
       System.out.println();
-      
-      
-      
 
 
    }

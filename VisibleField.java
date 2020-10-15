@@ -1,9 +1,3 @@
-// Name: Rong Wang
-// USC NetID: rwang424
-// CS 455 PA3
-// Fall 2020
-
-
 /**
   VisibleField class
   This is the data that's being displayed at any one point in the game (i.e., visible field, because it's what the
@@ -38,7 +32,6 @@ public class VisibleField {
    public static final int EXPLODED_MINE = 11;   // the one you uncovered by mistake (that caused you to lose)
    // ----------------------------------------------------------   
   
-   // <put instance variables here>
     /**
     * @param mineField: The minefield to use for for this VisibleField.
     * @param numRows: number of rows this minefield will have, must be positive.
@@ -64,6 +57,7 @@ public class VisibleField {
    private static final int DOWN = 1; // go to the down row.
    private int[] rowChange;
    private int[] colChange;
+  
    /**
       Create a visible field that has the given underlying mineField.
       The initial state will have all the mines covered up, no mines guessed, and the game
@@ -226,7 +220,7 @@ public class VisibleField {
    }
    
  
-   // <put private methods here>
+   // <private methods here>
    
     /**
      * When the user clicked on the mine at [row, col], that mine explodes, the the user lose the game.
@@ -298,42 +292,6 @@ public class VisibleField {
      * PRE: getMineField().inRange(row, col)
      */
    private void uncoverSquare(int row, int col){
-      /*assert getMineField().inRange(row, col);
-      if (!isUncovered(row, col)){ // Check if the square is covered.
-         numUncovered++;
-         int numAdjMines = mineField.numAdjacentMines(row, col);
-         if ( numAdjMines > 0){ // This square is adjancent to mines
-            status[row][col] = numAdjMines; // mine-adjacent squares will also be uncovered, but stop here as the boundary.
-            return;
-         }
-         else{ // This square is not adjacent to any mines.
-            for (int i: uncoverRecursion){
-               for (int j: uncoverRecursion){
-                  if (mineField.inRange(row+i, col+j) && (status[row+i][col+j] != MINE_GUESS)){
-                     uncoverSquare(row+i, col+j);
-                  }
-               }
-            }
-            
-            for (int i = row+LEFT; i <= row+RIGHT; i++){
-               for (int j = col+UP; j <= col+DOWN; j++){
-                  if (mineField.inRange(i, j) && (status[i][j] != MINE_GUESS)){ // if out of range, stop. If not, keep searching.
-                     // If the square has status MINE_GUESS, do not uncover.
-                     // Di not give the number 0 to the square that it not adjancent to any mines.
-                     uncoverSquare(i, j); // keep searching recursively from this new non-mine adjacnet square.
-                     // return ;
-                  }
-               }
-            }
-            
-            return;
-         }
-         // return;
-      }
-      else{ // If the square is opened, will do nothing.
-         return;
-      }
-      */
       if (!mineField.inRange(row, col) || (isUncovered(row, col)) || (status[row][col] == MINE_GUESS) || mineField.hasMine(row, col)){ //  if it is out of range, or it has been guessed, is a mine, or it has been uncovered, do nothing.
             return;
         }
